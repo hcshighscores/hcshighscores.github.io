@@ -215,12 +215,12 @@ function makeTables() {
     let buttonDiv = document.getElementById("button-div");
     for (let category of CATEGORIES) {
             // button
-            let btn = document.createElement('button');
-            btn.textContent = category;
-            btn.onclick = function() {
-                switchTab(category);
-                window.location.href="#" + category;
-            };
+        let btn = document.createElement('button');
+        btn.textContent = category;
+        btn.onclick = function() {
+            switchTab(category);
+            window.location.href="#" + category;
+        };
         buttonDiv.appendChild(btn);
 
         // containing div
@@ -338,7 +338,7 @@ function parseRuns(data) {
         }
 	
 	    entry = data.table.rows[i].c
-	
+        
 	    for (let j = 0; j < entry.length; j++) {
 		    if (entry[j] != undefined) {
 			    if (entry[j].f != undefined) {
@@ -350,6 +350,7 @@ function parseRuns(data) {
 		    }
 	    }
     }
+    console.log(runs)
     return runs;
 }
 
