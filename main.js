@@ -169,8 +169,8 @@ function createDropdown(div,run) {
     // comment
     let p = document.createElement('p');
     p.className = "comment";
-    if (run.Comments !== "") {
-        p.textContent = "Comments: " + run.Comments;
+    if (run.Comment !== "") {
+        p.textContent = "Comment: " + run.Comment;
         console.log(p.textContent);
         p.innerHTML = p.innerHTML.autoLink();
     }
