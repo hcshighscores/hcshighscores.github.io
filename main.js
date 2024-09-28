@@ -131,7 +131,7 @@ function fetchRuns(tries) {
     fetch(fetchLink)
     .then(res => res.text())
     .then(text => {
-        const data = JSON.parse(text.substring(47).slice(0, -2))
+        const data = JSON.parse(text.substring(47).slice(0, -2));
 		runs = parseRuns(data);
         console.log(" runs parsed");
 
