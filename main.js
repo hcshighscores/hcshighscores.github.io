@@ -93,6 +93,7 @@ class CategoryObject {
                 }
             }
         }
+        console.log("run added to category")
     }
 
     setEnabled(bool) {
@@ -117,7 +118,6 @@ function fetchCats(tries) {
 	makeTables();
 	switchTab(CATEGORIES[0]);
 	if (document.location.hash !== "") {
-        console.log("I need answers");
 		let hashCat = document.location.hash.split("#")[1].replace(/%20/g," ");
 		if (CATEGORIES.indexOf(hashCat) != -1) {
 			switchTab(hashCat);
@@ -136,6 +136,7 @@ function fetchRuns(tries) {
         // sort all runs of all categories by Time, we worry about filtering by category later
 	    // no longer necessary, Sheet #4 is pre-sorted
         //runs = runs.sort(sortRuns);
+        console.log(" runs parsed");
         populateTables(runs);
     }).catch(function(error) {
         console.log("refetching runs");
@@ -143,7 +144,6 @@ function fetchRuns(tries) {
             fetchRuns(tries+1);
         else
             document.getElementById("header-div").textContent = "Unable to retrieve the Google Sheets file";
-            console.log(error);
     });
 }
 
@@ -365,6 +365,7 @@ function populateTables(runs) {
     for (let run of runs) {
         categoryObjs.get(run.Category).add(run);
     }
+    console.log("tables populated");
 }
 
 function formatPlace(placeInt) {
