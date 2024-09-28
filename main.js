@@ -7,7 +7,7 @@ var CATEGORIES = []; //gets the category list from sheet 2 of the spreadsheet
 var SHOWGLOBAL = [];
 var CATEGORYRULES = [];
 var GLOBALRULES = "";
-var FIELDSTODISPLAY = ["Place", "Username", "Score", "Date", "QT"]; //keep this hardcoded
+var FIELDSTODISPLAY = ["Place", "Username", "Score", "Date"]; //keep this hardcoded
 var categoryObjs = new Map();
 var runs;
 
