@@ -3,11 +3,11 @@
 (function(){var k=[].slice;String.prototype.autoLink=function(){var d,b,g,a,e,f,h;e=1<=arguments.length?k.call(arguments,0):[];f=/(^|[\s\n]|<[A-Za-z]*\/?>)((?:https?|ftp):\/\/[\-A-Z0-9+\u0026\u2019@#\/%?=()~_|!:,.;]*[\-A-Z0-9+\u0026@#\/%=~()_|])/gi;if(!(0<e.length))return this.replace(f,"$1<a href='$2'>$2</a>");a=e[0];d=a.callback;g=function(){var c;c=[];for(b in a)h=a[b],"callback"!==b&&c.push(" "+b+"='"+h+"'");return c}().join("");return this.replace(f,function(c,b,a){c=("function"===typeof d?d(a):
     void 0)||"<a href='"+a+"'"+g+">"+a+"</a>";return""+b+c})}}).call(this);
 
-var CATEGORIES = []; //gets the category list from sheet 2 of the spreadsheet
+var CATEGORIES = []; 
 var SHOWGLOBAL = [];
 var CATEGORYRULES = [];
 var GLOBALRULES = "";
-var FIELDSTODISPLAY = ["Place", "Username", "Score", "Date"]; //keep this hardcoded
+var FIELDSTODISPLAY = ["Place", "Username", "Score", "Date"]; 
 var categoryObjs = new Map();
 var runs;
 
@@ -133,10 +133,8 @@ function fetchRuns(tries) {
     .then(text => {
         const data = JSON.parse(text.substring(47).slice(0, -2))
 		runs = parseRuns(data);
-        // sort all runs of all categories by Time, we worry about filtering by category later
-	    // no longer necessary, Sheet #4 is pre-sorted
-        //runs = runs.sort(sortRuns);
         console.log(" runs parsed");
+
         populateTables(runs);
     }).catch(function(error) {
         console.log("refetching runs");
@@ -154,9 +152,6 @@ function createDropdown(div,run) {
     if (embedLink !== "") {
         div.innerHTML = '<iframe width="' + EMBEDWIDTH + '" height="' + EMBEDHEIGHT + '" src="' + embedLink + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         div.innerHTML += '<p class="underembed">(<a href="' + link + '">' + link + '</a>)</p>';
-    //* } else if (URLisImage(link)) {
-    //*     div.innerHTML = '<img width="' + EMBEDWIDTH + '" height="' + EMBEDHEIGHT + '" onload="resizeImage(this)" src="' + link + '">';
-    //*     div.innerHTML += '<p class="underembed">(<a href="' + link + '">' + link + '</a>)</p>';
     } else {
         if (link !== "")
             div.innerHTML = '<br><a href="' + link + '">' + link + '</a>';
@@ -183,8 +178,6 @@ function embedCheck(runLink) {
     let ytAttempt = runLink.split("youtu.be/");
     if (ytAttempt.length == 1) ytAttempt = runLink.split("watch?v=");
     if (ytAttempt.length > 1) {
-        //extra variables after the ID seem to be fine, but we need to replace the & with a ?, and t=#s with start=#
-        //so glad youtube isn't consistent at all with its timecodes
         IDandVars = ytAttempt[1].split(/[\?|&]/g);
         finalString = IDandVars[0] + "?";
         for (i = 1; i < IDandVars.length; i++) {
@@ -198,7 +191,6 @@ function embedCheck(runLink) {
     ytAttempt = runLink.split("/file/d/");
     if (ytAttempt.length == 1) ytAttempt = runLink.split("open?id=");
     if (ytAttempt.length > 1) {
-        //drive link could be IDididiiddidd/etc, chop off the etc.
         ytAttempt = ytAttempt[1].split("/");
         return ("https://drive.google.com/file/d/" + ytAttempt[0] + "/preview");
     }
@@ -216,7 +208,7 @@ function makeTables() {
     let mainContainer = document.getElementById("main-container");
     let buttonDiv = document.getElementById("button-div");
     for (let category of CATEGORIES) {
-            // button
+        // button
         let btn = document.createElement('button');
         btn.textContent = category;
         btn.onclick = function() {
@@ -261,9 +253,9 @@ function makeTables() {
         rulesButton.className = 'rules';
         rulesButton.textContent = "Category Rules";
         rulesButton.onclick = function() {
-        if (divrules.style.maxHeight){
-            //slide back up
-            divrules.style.maxHeight = null;
+            if (divrules.style.maxHeight){
+                //slide back up
+                divrules.style.maxHeight = null;
             } else {
                 //slide it out
                 divrules.style.maxHeight = divrules.scrollHeight + "px";
@@ -357,7 +349,6 @@ function parseRuns(data) {
 }
 
 function formatRun(run, placeInt) {
-    // give the run its Place
     run.Place = formatPlace(placeInt);
 }
 
