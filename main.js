@@ -117,6 +117,7 @@ function fetchCats(tries) {
 	makeTables();
 	switchTab(CATEGORIES[0]);
 	if (document.location.hash !== "") {
+        console.log("I need answers");
 		let hashCat = document.location.hash.split("#")[1].replace(/%20/g," ");
 		if (CATEGORIES.indexOf(hashCat) != -1) {
 			switchTab(hashCat);
