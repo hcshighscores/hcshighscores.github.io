@@ -50,7 +50,13 @@ class CategoryObject {
 
         for (let field of FIELDSTODISPLAY) {
             let td = tr.insertCell();
-            td.textContent = run[field];
+            if (field == "Score") {
+                let f = new Intl.NumberFormat('en-US');
+                let n = f.format(run[field]);
+                td.textContent = n;
+            } else {
+                td.textContent = run[field];
+            }
         }
 
         // hover comment
