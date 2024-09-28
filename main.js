@@ -355,7 +355,7 @@ function formatRun(run, placeInt) {
 
 function populateTables(runs) {
     for (let run of runs) {
-        categoryObjs.get(run.Category).add(run);
+        categoryObjs.get(run.Version).add(run);
     }
     console.log("tables populated");
 }
