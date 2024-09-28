@@ -143,6 +143,7 @@ function fetchRuns(tries) {
             fetchRuns(tries+1);
         else
             document.getElementById("header-div").textContent = "Unable to retrieve the Google Sheets file";
+            console.log(error);
     });
 }
 
