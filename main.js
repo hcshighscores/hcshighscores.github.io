@@ -60,7 +60,7 @@ class CategoryObject {
         }
 
         // hover comment
-        tr.title = run.Comments;
+        tr.title = run.Comment;
 
         //dropdown collapsible content. put it in its own tr/td
         let divtr = this.table.insertRow();
