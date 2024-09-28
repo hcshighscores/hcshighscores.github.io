@@ -231,7 +231,7 @@ function makeTables() {
         //submit run button
         let submitButton = document.createElement('button');
         submitButton.className = 'submit';
-        submitButton.textContent = "Submit Run";
+        submitButton.textContent = "Submit Score";
         submitButton.onclick = function() {
             //* d = new Date();
             //* function pad(number) {
