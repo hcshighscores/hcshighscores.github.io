@@ -29,7 +29,7 @@
 body {
     margin: auto;
     padding: 3em;
-    align: center;
+    align-content: center;
 
     min-width: 30em;
 
