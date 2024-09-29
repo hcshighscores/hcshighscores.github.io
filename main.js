@@ -303,7 +303,7 @@ function makeTables() {
 function parseCategories() {
 	//FUCK YOU GOOGLE SHEETS
 	GLOBALRULES =
-"I HAVEN't GOTTEN THE FUCKING RULES YET"
+"Video proof is required. It is recommended that you download<a href='https://drive.google.com/file/d/1nbKzODTVWhIlL-o8UZwUdUuXlqFjv7LS/view?usp=sharing'>my quality of life mod</a>"
 	
 	hardcodecategories = 		[ "v1.0", "v1.0.2"];
 	hardcodeshowglobalrules = 	[ "yes", "yes"];
