@@ -60,7 +60,7 @@ h2 {
     background-color: var(--base-color);
     border-radius: 16px;
 
-    width: 400%;
+    width: 150%;
     max-width: 35em;
     min-width: 15em;
 
@@ -69,7 +69,7 @@ h2 {
 
 #main-container {
     margin: auto;
-    margin-top: 3em;
+    /*margin-top: em;*/
 
     border-radius: 10px;
     background-color: var(--base-color);
