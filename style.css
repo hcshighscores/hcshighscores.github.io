@@ -58,10 +58,10 @@ h2 {
 
     padding: 0.25em;
     background-color: var(--base-color);
-    border-radius: 15px;
+    border-radius: 16px;
 
-    width: 40%;
-    max-width: 30em;
+    width: 400%;
+    max-width: 35em;
     min-width: 15em;
 
     font-family: HPTitle;
