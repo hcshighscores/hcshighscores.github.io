@@ -183,6 +183,7 @@ tr {
 }
 
 td {
+    font-size: 1.25em;
     max-width: 10em;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -204,10 +205,43 @@ td {
     margin: 0.5em;
 }
 
-.place1 { color:#ffff99; }
-.place2 { color:#cccccc; }
-.place3 { color:#ffb366; }
-.place69 { color:#e293e5; }
+.place1 td:nth-child(2) { 
+    color:#f7f97f;
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 30%, #000 50%, rgba(0,0,0,.7) 70%);
+    mask-size: 200%;
+    animation: shine 2s linear infinite;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #f7f97f;
+}
+.place2 td:nth-child(2) { 
+    color:#cccccc;
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 30%, #000 50%, rgba(0,0,0,.7) 70%);
+    mask-size: 200%;
+    animation: shine 2s linear infinite;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #ccc;
+}
+.place3 td:nth-child(2){ 
+    color:#ffb366;
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.8) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    mask-size: 200%;
+    animation: shine 2s cubic-bezier(0.11, 0, 0.5, 0) infinite;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #ffb366;
+}
+.place69 { 
+    color:#e293e5;
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    mask-size: 200%;
+    animation: shine 2s cubic-bezier(0.11, 0, 0.5, 0) infinite;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #e293e5;
+}
+
+@keyframes shine {
+    from { mask-position: 150%; }
+    to { mask-position: -50%; }
+}
 
 tr:nth-child(2) {
     background-color: var(--table-header-color);
