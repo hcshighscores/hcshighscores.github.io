@@ -159,7 +159,10 @@ function createDropdown(div,run) {
     if (embedLink !== "") {
         div.innerHTML = '<iframe width="' + EMBEDWIDTH + '" height="' + EMBEDHEIGHT + '" src="' + embedLink + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         div.innerHTML += '<p class="underembed">(<a href="' + link + '">' + link + '</a>)</p>';
-    } else {
+    } else if (URLisImage(link)) {
+        div.innerHTML = '<img width="' + EMBEDWIDTH + '" height="' + EMBEDHEIGHT + '" onload="resizeImage(this)" src="' + link + '">';
+        div.innerHTML += '<p class="underembed">(<a href="' + link + '">' + link + '</a>)</p>';
+    }else {
         if (link !== "")
             div.innerHTML = '<br><a href="' + link + '">' + link + '</a>';
         else
@@ -178,6 +181,10 @@ function createDropdown(div,run) {
         p.textContent = "No comment";
     }
     div.appendChild(p);
+}
+
+function resizeImage(img) {
+	if (img.naturalHeight < EMBEDHEIGHT) img.height = img.naturalHeight;
 }
 
 function embedCheck(runLink) {
@@ -375,4 +382,17 @@ function formatPlace(placeInt) {
         return placeInt + "rd";
     else
         return placeInt + "th";
+}
+
+function URLisImage(uri) {
+    //make sure we remove any nasty GET params
+    uri = uri.split('?')[0];
+    //moving on, split the uri into parts that had dots before them
+    var parts = uri.split('.');
+    //get the last part (should be the extension)
+    var extension = parts[parts.length-1];
+    //define some image types to test against
+    var imageTypes = ['jpg','jpeg','png','gif','webp'];
+    //check if the extension matches anything in the list.
+    return (imageTypes.indexOf(extension) !== -1)
 }
