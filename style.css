@@ -1,13 +1,13 @@
 :root {
-    --base-color: #07ae;
+    --base-color: rgba(88, 0, 170, 0.933);
 
     --button-selected: #0000;
     --button-unselected: #0004;
     --button-hover: #fff2;
 
     --table-header-color: #1118;
-    --table-odd-color: #3456;
-    --table-even-color: #1236;
+    --table-odd-color: rgba(105, 73, 116, 0.4);
+    --table-even-color: rgba(48, 15, 48, 0.4);
     --table-hover-color: #aaa6;
 }  
 
