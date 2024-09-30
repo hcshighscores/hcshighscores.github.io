@@ -302,7 +302,7 @@ function makeTables() {
 
 function parseCategories() {
 	//FUCK YOU GOOGLE SHEETS
-	GLOBALRULES = "Video proof is required. It is recommended that you download <a href='https://drive.google.com/file/d/1nbKzODTVWhIlL-o8UZwUdUuXlqFjv7LS/view?usp=sharing'>Saiki's quality of life mod</a>\n Video proof is required "
+	GLOBALRULES = "Video proof is required. It is recommended that you download <a href='https://drive.google.com/file/d/1nbKzODTVWhIlL-o8UZwUdUuXlqFjv7LS/view?usp=sharing'>Saiki's quality of life mod</a>"
 	
 	hardcodecategories = 		[ "v1.0", "v1.0.2"];
 	hardcodeshowglobalrules = 	[ "yes", "yes"];
