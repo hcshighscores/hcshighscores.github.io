@@ -302,7 +302,17 @@ function makeTables() {
 
 function parseCategories() {
 	//FUCK YOU GOOGLE SHEETS
-	GLOBALRULES = "Video proof is required. It is recommended that you download <a href='https://drive.google.com/file/d/1nbKzODTVWhIlL-o8UZwUdUuXlqFjv7LS/view?usp=sharing'>Saiki's quality of life mod</a>"
+	GLOBALRULES = "General Rules:
+-Video Evidence is required.  
+-Must be using speedrun mod and not turbo/joy to key.
+-Frame rate must be capped at 144.
+-Video must show title screen (at beginning or end- doesn't matter.)
+-Character mods are not allowed. 
+
+Saiki's QoL Mods Rules:
+-Forced Girls & Forced Starting Items are allowed.
+-Total Fan Count is also allowed (why wouldn't you use this?)
+-SPEEDBALL MODE IS NOT ALLOWED IN COMPETITIVE PLAY"
 	
 	hardcodecategories = 		[ "v1.0", "v1.0.2"];
 	hardcodeshowglobalrules = 	[ "yes", "yes"];
