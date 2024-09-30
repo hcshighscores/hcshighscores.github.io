@@ -307,8 +307,8 @@ function parseCategories() {
 	hardcodecategories = 		[ "v1.0", "v1.0.2"];
 	hardcodeshowglobalrules = 	[ "yes", "yes"];
 	hardcoderules = 			[ 
-"play on the 1.0 version :I ",
-"play on the 1.0.2 version :I "]
+"\nplay on the 1.0 version :I ",
+"\nplay on the 1.0.2 version :I "]
 	for (let i = 0; i < hardcodecategories.length; i++) {
 		CATEGORIES.push(hardcodecategories[i])
 		SHOWGLOBAL[CATEGORIES[CATEGORIES.length-1]] = hardcodeshowglobalrules[i]
