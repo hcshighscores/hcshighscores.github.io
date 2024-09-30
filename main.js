@@ -249,7 +249,7 @@ function makeTables() {
         let divrules = document.createElement('div');
         divrules.className = "rulesdiv";
         if (SHOWGLOBAL[category] == "yes") {
-            divrules.innerHTML = GLOBALRULES + "\nCategory rules:\n" + CATEGORYRULES[category];
+            divrules.innerHTML = GLOBALRULES + "\n\nCategory rules:" + CATEGORYRULES[category];
         }
         else {
             divrules.textContent = CATEGORYRULES[category];
@@ -307,8 +307,8 @@ function parseCategories() {
 	hardcodecategories = 		[ "v1.0", "v1.0.2"];
 	hardcodeshowglobalrules = 	[ "yes", "yes"];
 	hardcoderules = 			[ 
-"\nplay on the 1.0 version :I ",
-"\nplay on the 1.0.2 version :I "]
+"play on the 1.0 version :I ",
+"play on the 1.0.2 version :I "]
 	for (let i = 0; i < hardcodecategories.length; i++) {
 		CATEGORIES.push(hardcodecategories[i])
 		SHOWGLOBAL[CATEGORIES[CATEGORIES.length-1]] = hardcodeshowglobalrules[i]
