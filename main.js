@@ -249,7 +249,7 @@ function makeTables() {
         let divrules = document.createElement('div');
         divrules.className = "rulesdiv";
         if (SHOWGLOBAL[category] == "yes") {
-            divrules.innerHTML = GLOBALRULES + "\n" + CATEGORYRULES[category];
+            divrules.innerHTML = GLOBALRULES + "\nCategory rules:\n" + CATEGORYRULES[category];
         }
         else {
             divrules.textContent = CATEGORYRULES[category];
