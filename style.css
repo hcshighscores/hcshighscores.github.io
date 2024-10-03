@@ -107,12 +107,12 @@ button {
 }
 
 a {
-    color: inherit;
+    color: #cc27b3;
 }
 
 a:hover {
     transition: color 0.5s;
-    color: white;
+    color: #ff6ee9;
 }
 
 img {
