@@ -223,7 +223,7 @@ td {
 }
 .place3 td:nth-child(2){ 
     color:#ffb366;
-    mask-image: linear-gradient(-75deg, rgba(0,0,0,78) 30%, #000 50%, rgba(0,0,0,.7) 70%);
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 30%, #000 50%, rgba(0,0,0,.7) 70%);
     mask-size: 200%;
     animation: shine 2s linear infinite;
     -webkit-text-stroke: 1px;
