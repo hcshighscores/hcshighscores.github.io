@@ -311,11 +311,12 @@ function parseCategories() {
 	//FUCK YOU GOOGLE SHEETS
 	GLOBALRULES = "General Rules:\n-Video Evidence is Preferred(a screenshot of the studio report is fine).\n-Must be using speedrun mod and not turbo/joy to key.\n-Frame rate must be capped at 144.\n-Video must show title screen (at beginning or end- doesn't matter.)\n-Character mods are not allowed.<br><br>Saiki's QoL Mods Rules:\n-Forced Girls & Forced Starting Items are allowed.\n-Total Fan Count is also allowed (why wouldn't you use this?)\n-SPEEDBALL MODE IS NOT ALLOWED IN COMPETITIVE PLAY <br><br><a href='https://drive.google.com/drive/folders/1I-Mg2eZNKaCoYRbukT_phWcI63xtJe-U?usp=sharing'>Saiki's mod(download everything)</a><br>The Speedrun Mod can be found on the speedrun.com page for HunieCam"
 	
-	hardcodecategories = 		[ "v1.0", "v1.0.2"];
-	hardcodeshowglobalrules = 	[ "yes", "yes"];
+	hardcodecategories = 		[ "v1.0", "v1.0.2","RHM"];
+	hardcodeshowglobalrules = 	[ "yes", "yes","yes"];
 	hardcoderules = 			[ 
 "\nplay on the 1.0 version :I ",
-"\nplay on the 1.0.2 version :I "]
+"\nplay on the 1.0.2 version :I ",
+"\nplay on Rock Hard Mode :I"]
 	for (let i = 0; i < hardcodecategories.length; i++) {
 		CATEGORIES.push(hardcodecategories[i])
 		SHOWGLOBAL[CATEGORIES[CATEGORIES.length-1]] = hardcodeshowglobalrules[i]
@@ -367,7 +368,7 @@ function formatRun(run, placeInt) {
 
 function populateTables(runs) {
     for (let run of runs) {
-        categoryObjs.get(run.Version).add(run);
+        categoryObjs.get(run.Category).add(run);
     }
     console.log("tables populated");
 }
