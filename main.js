@@ -153,7 +153,7 @@ function fetchRuns(tries) {
 }
 
 function createDropdown(div,run) {
-    let link = run["Video link"];
+    let link = run["Proof link"];
     let embedLink = embedCheck(link);
 
     if (embedLink !== "") {
