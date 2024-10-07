@@ -206,12 +206,12 @@ td {
 }
 
 .place1 td:nth-child(2) { 
-    color:#f7f97f;
+    color:#f6d52b;
     mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 30%, #000 50%, rgba(0,0,0,.7) 70%);
     mask-size: 200%;
     animation: shine 2s linear infinite;
     -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: #f7f97f;
+    -webkit-text-stroke-color: #f6d52b;
 }
 .place2 td:nth-child(2) { 
     color:#cccccc;
