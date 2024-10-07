@@ -133,7 +133,7 @@ function fetchCats(tries) {
 }
 
 function fetchRuns(tries) {
-	fetchLink = "https://docs.google.com/spreadsheets/d/1pZ5zPPzaZvygFBlPG1Ye72xx8vSDffypoJEm8cD1l3k/gviz/tq?tqx=out:json&tq&#gid=1256879831";
+	fetchLink = "https://docs.google.com/spreadsheets/d/1pZ5zPPzaZvygFBlPG1Ye72xx8vSDffypoJEm8cD1l3k/gviz/tq?tqx=out:json&tq&gid=594815325";
     fetch(fetchLink)
     .then(res => res.text())
     .then(text => {
