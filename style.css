@@ -33,7 +33,7 @@ body {
 
     min-width: 30em;
 
-    /*background-image: url('res/lillian.png');*/
+    background-image: url('res/lillian.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
