@@ -33,7 +33,7 @@ body {
 
     min-width: 30em;
 
-    background-image: url('res/lillian.png');
+    /*background-image: url('res/lillian.png');*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -207,7 +207,7 @@ td {
 
 .place1 td:nth-child(2) { 
     color:#f6d52b;
-    mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 30%, #000 50%, rgba(0,0,0,.7) 70%);
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 47%, #000 50%, rgba(0,0,0,.7) 53%);
     mask-size: 200%;
     animation: shine 2s linear infinite;
     -webkit-text-stroke: 1px;
@@ -215,7 +215,7 @@ td {
 }
 .place2 td:nth-child(2) { 
     color:#ccc;
-    mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 30%, #000 50%, rgba(0,0,0,.7) 70%);
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 47%, #000 50%, rgba(0,0,0,.7) 53%);
     mask-size: 200%;
     animation: shine 2s linear infinite;
     -webkit-text-stroke: 1px;
@@ -223,7 +223,7 @@ td {
 }
 .place3 td:nth-child(2){ 
     color:#ffb366;
-    mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 30%, #000 50%, rgba(0,0,0,.7) 70%);
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 47%, #000 50%, rgba(0,0,0,.7) 53%);
     mask-size: 200%;
     animation: shine 2s linear infinite;
     -webkit-text-stroke: 1px;
@@ -231,7 +231,7 @@ td {
 }
 .place69 td:nth-child(2){ 
     color:#e293e5;
-    mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 30%, #000 50%, rgba(0,0,0,.7) 70%);
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 45%, #000 50%, rgba(0,0,0,.7) 55%);
     mask-size: 200%;
     animation: shine 2s linear infinite;
     -webkit-text-stroke: 1px;
