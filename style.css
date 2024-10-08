@@ -231,7 +231,7 @@ td {
 }
 .place69 td:nth-child(2){ 
     color:#e293e5;
-    mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 45%, #000 50%, rgba(0,0,0,.7) 55%);
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.7) 47%, #000 50%, rgba(0,0,0,.7) 53%);
     mask-size: 200%;
     animation: shine 2s linear infinite;
     -webkit-text-stroke: 1px;
